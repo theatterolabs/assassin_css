@@ -1,0 +1,172 @@
+<html>
+  <head>
+    <style>
+      @font-face {
+  font-family: 'Aspire';
+   src: url('./aspire.ttf')  format('truetype');
+}
+
+.popup_container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .86);
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+.popup {
+    width: auto;
+    height: auto;
+    outline-offset: -2px;
+    background-color: #cdd2d2;
+    border: 2px solid #a19f9f;
+    border-radius: 30px;
+    outline: 3px solid #000;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px 3%;
+    position: relative;
+    top: 50%;
+    overflow: visible;
+    transform: translate(0, -50%);
+    box-shadow: -2px 0 5px rgba(255, 255, 255, .2), 2px 0 5px rgba(255, 255, 255, .2), 0 -2px 5px rgba(255, 255, 255, .2), 0 2px 5px rgba(255, 255, 255, .2);
+}
+
+.exit_btn {
+    position: fixed;
+    top: -10px;
+    bottom: 0%;
+    left: auto;
+    right: -10px;
+   max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  border: 0;
+      width: 40px;
+    aspect-ratio: auto 40 / 40;
+    height: 40px;
+      overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.person {
+    width: 100%;
+    height: 30%;
+    justify-content: flex-start;
+    margin-bottom: 5%;
+    display: flex;
+}
+
+.person_pic {
+  max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+      overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.person_details {
+    height: 100%;
+    flex-flow: column;
+    flex: 0 auto;
+    align-content: flex-start;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding-bottom: 0;
+    padding-left: 3%;
+    padding-right: 0;
+    display: flex;
+}
+
+.person_name, .person_age, .person_occupation {
+    align-self: flex-start;
+    font-family: Aspire;
+}
+
+.carryon_title {
+    flex-direction: column;
+    margin-bottom: 5%;
+    display: flex;
+}
+
+.carryon_text {
+    font-family: Aspire;
+    font-size: 16px;
+}
+
+.carryon_line {
+    width: 100%;
+    height: 5px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+.item_menu {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.item {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border: 1px #000;
+    border-radius: 10px;
+    margin-right: 15px;
+    padding: 10px;
+    overflow: visible;
+}
+
+.item_icon {
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item_text_block {
+    height: auto;
+    background-color: #c9c9c9;
+    border-radius: 10px;
+    padding: 15px 0 15px 10px;
+}
+
+.item_text {
+    font-family: Aspire;
+}
+
+    </style>
+</head>
+  <body>
+    <div class="popup_container">
+  <div class="popup"><img src="./exit_btn.png" loading="lazy" width="40" height="40" alt="" class="exit_btn">
+    <div class="person"><img src="./L1_P1.png" loading="lazy" alt="" class="person_pic">
+      <div class="person_details">
+        <div class="person_name">Name : Marcus Sullivan</div>
+        <div class="person_age">Age : 34</div>
+        <div class="person_occupation">Occupation: Body Guard</div>
+      </div>
+    </div>
+    <div class="carryon_title">
+      <div class="carryon_text">Carryon Items</div>
+      <div class="carryon_line"></div>
+    </div>
+    <div class="item_menu">
+      <div id="1" class="item"><img src="./L1_P1_I1.png" loading="lazy" alt="" class="item_icon"></div>
+      <div id="2" class="item"><img src="./L1_P1_I2.png" loading="lazy" alt="" class="item_icon"></div>
+      <div id="3" class="item"><img src="" loading="lazy" alt="" class="item_icon"></div>
+      <div id="4" class="item"><img src="" loading="lazy" alt="" class="item_icon"></div>
+    </div>
+    <div class="item_text_block">
+      <div class="item_text">A Map With An X Mark</div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
