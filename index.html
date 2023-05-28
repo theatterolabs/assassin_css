@@ -123,7 +123,14 @@
     padding: 10px;
     overflow: visible;
 }
-
+      
+.iten:active {
+   .item:active, .item:focus {
+    background-color: #c9c9c9;
+    border-style: solid;
+    border-color: #0ea4e9;
+  }
+   
 .item_icon {
     height: 100%;
     position: relative;
@@ -143,6 +150,24 @@
     font-family: Aspire;
   font-size: 12px;
 }
+  
+.declare_btn {
+    width: auto;
+    height: 50px;
+    position: fixed;
+    top: auto;
+    bottom: -25px;
+    left: 50%;
+    right: 0%;
+    transform: translate(-50%);
+}
+      
+.declare_btn:active {
+      
+    height: 45px;
+ 
+ }
+      
 
     </style>
 </head>
@@ -169,6 +194,7 @@
     <div class="item_text_block">
       <div class="item_text">A Map With An X Mark</div>
     </div>
+    <img src="./declare_btn.png" loading="lazy" alt="" class="declare_btn">
   </div>
 </div>
   </body>
