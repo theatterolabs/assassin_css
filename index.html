@@ -8,7 +8,18 @@
   font-family: 'Aspire';
    src: url('./aspire.ttf')  format('truetype');
 }
+    
       
+.startLandscape {
+  position:absolute;
+  left:50%;
+  top:50%;
+  z-index:10000;
+  width:150px;
+  height:60px;
+  transform: translate(-50%, -50%);
+  
+}
       
 
 .popup_container {
@@ -177,7 +188,23 @@
     </style>
 </head>
   <body>
+    <script>
+      function lock (orientation) {
+  // (A1) GO INTO FULL SCREEN FIRST
+  let de = document.documentElement;
+  if (de.requestFullscreen) { de.requestFullscreen(); }
+  else if (de.mozRequestFullScreen) { de.mozRequestFullScreen(); }
+  else if (de.webkitRequestFullscreen) { de.webkitRequestFullscreen(); }
+  else if (de.msRequestFullscreen) { de.msRequestFullscreen(); }
+
+  // (A2) THEN LOCK ORIENTATION
+  screen.orientation.lock(orientation);
+}
+    </script>
     <div class="popup_container">
+      <!-- Lock Orientation Button --> 
+      <input class="startLandscape" type="button" value="Landscape" onclick="lock('landscape')">
+      
   <div class="popup"><img src="./exit_btn.png" loading="lazy" width="40" height="40" alt="" class="exit_btn">
     <div class="person"><img src="./L1_P1.png" loading="lazy" alt="" class="person_pic">
       <div class="person_details">
